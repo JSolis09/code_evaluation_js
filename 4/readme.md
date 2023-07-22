@@ -4,10 +4,9 @@ In the excercise 2, I mocked the status list in the storage, then I created `Cur
 
 In the excercise 3, Also I installed `@reduxjs/toolkit` and `react-redux`, for purpose testing I created a server in node using express in order to mock the get APIs, then I created the services in the application, and created a createAsyncThunk function to fetch all the request, then I created a logic to map each dwelling with its device and return a array of devices and set in the application store. In the App JS, I dispatch the event, get the data and render the list of devices and company name. After finish I created the Unit test for this component.
 
-Here we are using the applications created in excercise 2 and 3
+to run the uni test:
 
-go to 2 directory, then you can run
-
+go to 2 directory,
 In the project directory, you can run:
 ### `npm install`(omit if you already did this step before) and `npm run test`
 
