@@ -1,0 +1,73 @@
+@import '../../../styles//variables';
+
+.h-status {
+  width: 100%;
+  border-radius: 11px;
+  background-color: $brand-charcoal-lightest-tint;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05) inset;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  box-sizing: border-box;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &--collapsed {
+    .h-status__right {
+      flex: 1;
+      justify-content: space-between;
+    }
+  }
+
+  &.no-radius {
+    &-bottom {
+      border-radius: 11px 11px 0px 0px;
+      margin-bottom: -4px;
+    }
+
+    &-top {
+      border-radius: 0px 0px 11px 11px;
+      margin-top: -4px;
+    }
+  }
+
+  &__text {
+   @include caption1bold;
+    color: $brand-secondary-grey;
+  }
+
+  &__right {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__caption {
+    @include caption1;
+    color: $brand-secondary-grey;
+
+    &.success, &.error, &.warning, &.measurement {
+      @include heading5;
+    }
+
+    &.success {
+      color: $statuses-success;
+    }
+
+    &.error {
+      color: $statuses-error;
+    }
+
+    &.warning {
+      color: $statuses-alert;
+    }
+
+    &.measurement {
+      color: $brand-secondary-grey;
+    }
+  }
+
+  &__info {
+    width: 21px;
+    height: 21px;
+  }
+}

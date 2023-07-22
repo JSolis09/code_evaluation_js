@@ -1,0 +1,32 @@
+$brand-secondary-grey: #535F66;
+$statuses-success: #39DD7B;
+$statuses-error: #F96C6C;
+$statuses-alert: #FFC700;
+$brand-charcoal-lightest-tint: #F7FBFD;
+$white: #FFFFFF;
+
+@mixin subtitle1 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+@mixin caption1 {
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+}
+
+@mixin caption1bold {
+  @include caption1;
+  font-weight: 600;
+}
+
+@mixin heading5 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
