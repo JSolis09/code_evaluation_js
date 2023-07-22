@@ -28,12 +28,13 @@ const CurrenStatus = () => {
   }, [listRef]);
 
   return (
-    <div className={`h-currentStatus ${!isExpanded ? 'h-currentStatus--collapsed' : ''}`}>
+    <div data-testid="currentStatus" className={`h-currentStatus ${!isExpanded ? 'h-currentStatus--collapsed' : ''}`}>
       <header className="h-currentStatus__title">
         <span>Current status</span>
         <img src={infoLogo} className="h-currentStatus__title-icon" alt="info_logo" />
       </header>
       <div
+        data-testid="statusList"
         ref={listRef}
         className={`h-currentStatus__list ${hasScroll ? 'h-currentStatus__list--scroll': ''}`
       }>
@@ -44,7 +45,7 @@ const CurrenStatus = () => {
           </button>
         )}
       </div>
-      <button className="h-currentStatus__btn-expand" onClick={toggleExpandSection}>
+      <button data-testid="btn-expand" className="h-currentStatus__btn-expand" onClick={toggleExpandSection}>
         <img
           src={isExpanded ? arrowLeft : arrowRight}
           alt={`${isExpanded ? 'Colapsed icon' : 'expanded icon'}`}

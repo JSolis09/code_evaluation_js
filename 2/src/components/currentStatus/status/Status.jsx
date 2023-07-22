@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import PropTypes from "prop-types";
 import infoLogo from "../../../assets/info.svg";
 import './Status.scss';
 
@@ -12,6 +13,7 @@ const getStatusContainerClassnames = (noBorderRadius, isExpanded) => {
 
 const Status = ({ text,  caption, variant, hasInfo, noBorderRadius, isExpanded }) => (
   <div
+    data-testid="status"
     className={getStatusContainerClassnames(noBorderRadius, isExpanded)}
   >
     <span className="h-status__text">{text}</span>
@@ -21,5 +23,18 @@ const Status = ({ text,  caption, variant, hasInfo, noBorderRadius, isExpanded }
     </div>
   </div>
 );
+
+Status.propTypes = {
+  text: PropTypes.string.isRequired,
+  caption: PropTypes.string.isRequired,
+  variant: PropTypes.oneOf(['success', 'error', 'measurement', 'warning']),
+  noBorderRadius: PropTypes.oneOf(['top', 'bottom']),
+  isExpanded: PropTypes.bool,
+};
+
+Status.defaultProps = {
+  text: '',
+  caption: '',
+};
 
 export default memo(Status);

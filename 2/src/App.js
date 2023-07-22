@@ -1,7 +1,6 @@
 import './styles/app.scss';
 import { CurrentStats } from './components';
 
-
 function App() {
   return (
     <div className="App">
